@@ -1,7 +1,13 @@
-import type { NextPage } from 'next';
+import Layout from 'components/app/Layout';
+import type { NextPageWithLayout } from 'pages/_app';
+import { ReactElement } from 'react';
 
-const Home: NextPage = () => {
+const AppPage: NextPageWithLayout = () => {
   return <h1 className="text-3xl ">This is TagHub App!</h1>;
 };
 
-export default Home;
+AppPage.getLayout = function getLayout(page: ReactElement) {
+  return <Layout>{page}</Layout>;
+};
+
+export default AppPage;
