@@ -1,5 +1,5 @@
-import { Html, Head, Main, NextScript } from "next/document";
-import NextDocument from "next/document";
+import { Html, Head, Main, NextScript } from 'next/document';
+import NextDocument from 'next/document';
 
 class Document extends NextDocument {
   render() {
@@ -13,7 +13,7 @@ class Document extends NextDocument {
             crossOrigin="true"
           />
           <link
-            href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;700&display=swap"
+            href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;700&display=swap"
             rel="stylesheet"
           />
         </Head>

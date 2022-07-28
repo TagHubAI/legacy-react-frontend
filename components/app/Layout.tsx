@@ -6,9 +6,9 @@ interface LayoutProps {
 
 export default function Layout({ children }: LayoutProps) {
   return (
-    <div className="flex">
+    <div className="md:flex">
       <SideNav />
-      <main className="bg-gray-50 w-full">{children}</main>
+      {children}
     </div>
   );
 }
