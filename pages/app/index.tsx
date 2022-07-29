@@ -1,13 +1,12 @@
 import Layout from 'components/app/Layout';
 import type { NextPageWithLayout } from 'pages/_app';
-import { ReactElement, useEffect, useRef, useState } from 'react';
+import { ReactElement, useRef, useState } from 'react';
 import * as Dialog from '@radix-ui/react-dialog';
 import NewWorkflowPage from './workflows/new';
 
 const AppHomePage: NextPageWithLayout = () => {
   const ref = useRef(null);
   const [open, setOpen] = useState(false);
-  useEffect(() => console.log(ref.current), []);
 
   return (
     <main ref={ref} className="bg-gray-50 px-4 py-3 w-full relative">

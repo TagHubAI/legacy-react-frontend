@@ -20,4 +20,12 @@ module.exports = {
   core: {
     builder: '@storybook/builder-webpack5',
   },
+  features: {
+    storyStoreV7: true,
+  },
+  typescript: {
+    check: false,
+    reactDocgen: false,
+  },
+  staticDirs: ['../public'],
 };
