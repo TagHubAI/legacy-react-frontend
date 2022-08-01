@@ -1,4 +1,4 @@
-import '../styles/globals.css';
+import '../assets/styles/globals.css';
 import TabHubTheme from './brand';
 
 export const parameters = {

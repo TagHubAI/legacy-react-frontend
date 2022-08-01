@@ -1,7 +1,7 @@
-import Layout from 'components/app/Layout';
-import type { NextPageWithLayout } from 'pages/_app';
-import { ReactElement, useRef, useState } from 'react';
+import { useRef, useState } from 'react';
 import * as Dialog from '@radix-ui/react-dialog';
+import Layout from 'components/layouts/App';
+import type { NextPageWithLayout } from 'pages/_app';
 import NewWorkflowPage from './workflows/new';
 
 const AppHomePage: NextPageWithLayout = () => {
@@ -17,7 +17,6 @@ const AppHomePage: NextPageWithLayout = () => {
           className="border border-gray-200 h-10 text-sm p-2 min-w-full"
         />
       </form>
-
       <div className="my-7">
         <h1 className="text-2xl my-4">Recent workflows</h1>
 
@@ -44,7 +43,7 @@ const AppHomePage: NextPageWithLayout = () => {
   );
 };
 
-AppHomePage.getLayout = function getLayout(page: ReactElement) {
+AppHomePage.getLayout = function getLayout(page: React.ReactElement) {
   return <Layout>{page}</Layout>;
 };
 

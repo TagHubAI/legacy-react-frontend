@@ -8,12 +8,10 @@ export default {
   component: Barstack,
 } as ComponentMeta<typeof Barstack>;
 
-export const Primary: ComponentStory<typeof Barstack> = ({ data }) => {
+export const Primary: ComponentStory<typeof Barstack> = () => {
   return (
     <ParentSize>
-      {({ width, height }) => (
-        <Barstack width={width} height={height} data={data} />
-      )}
+      {({ width, height }) => <Barstack width={width} height={height} />}
     </ParentSize>
   );
 };

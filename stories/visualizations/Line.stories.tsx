@@ -8,7 +8,7 @@ export default {
   component: LineChart,
 } as ComponentMeta<typeof LineChart>;
 
-export const Primary: ComponentStory<typeof LineChart> = ({ data }) => {
+export const Primary: ComponentStory<typeof LineChart> = () => {
   return (
     <ParentSize className="my-5">
       {({ width, height }) => <LineChart width={width} height={height} />}

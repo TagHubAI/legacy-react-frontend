@@ -1,4 +1,5 @@
 /** @type {import('tailwindcss').Config} */
+/** @type {import('tailwindcss/plugin')} */
 const plugin = require('tailwindcss/plugin');
 
 module.exports = {
@@ -8,6 +9,9 @@ module.exports = {
   ],
   theme: {
     extend: {
+      svg: {
+        backgroundColor: 'black',
+      },
       aspectRatio: {
         '4/3': '4 / 3',
       },
@@ -23,7 +27,7 @@ module.exports = {
       },
       animation: {
         'fade-in': 'fade-in 200ms ease-in-out',
-        'fade-out': 'fade-out 200ms ease-in-out',
+        'fade-out': 'fade-out 2000ms ease-in-out',
       },
     },
     fontFamily: {
@@ -38,6 +42,17 @@ module.exports = {
       dataStateVariant('on', helpers);
       dataStateVariant('checked', helpers);
       dataStateVariant('unchecked', helpers);
+
+      helpers.addComponents({
+        '.icons': {
+          '*': {
+            strokeWidth: 'inherit',
+          },
+        },
+      });
+
+      helpers.addVariant('collapsed', ['&.collapsed', '.collapsed &']);
+      helpers.addVariant('data-layout-compact', '[data-layout="compact"] &');
     }),
   ],
 };

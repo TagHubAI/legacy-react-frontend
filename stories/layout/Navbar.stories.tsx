@@ -2,7 +2,7 @@
 
 import React from 'react';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
-import SideNav from '../../components/app/SideNav';
+import SideNav from '../../components/app/Navbar';
 
 export default {
   title: 'Layout/Navbar',
