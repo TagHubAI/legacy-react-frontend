@@ -90,8 +90,8 @@ export default function SideNav() {
   return (
     <nav
       ref={ref}
-      className="flex sm:flex-col z-20 relative justify-between sm:h-screen
-      border-b sm:border-r border-gray-200 data-layout-compact:sm:w-16 sm:w-72"
+      className="flex shrink-0 sm:flex-col z-20 relative justify-between sm:h-screen
+      border-b sm:border-r border-gray-200 data-layout-compact:sm:w-16 sm:w-64"
     >
       <>
         <Link href="/">

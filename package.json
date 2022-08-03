@@ -16,6 +16,8 @@
     "@radix-ui/react-checkbox": "^1.0.0",
     "@radix-ui/react-collapsible": "^1.0.0",
     "@radix-ui/react-dialog": "^1.0.0",
+    "@radix-ui/react-dropdown-menu": "^1.0.0",
+    "@reduxjs/toolkit": "^1.8.3",
     "@types/d3-array": "^3.0.3",
     "@types/d3-time-format": "^4.0.0",
     "@visx/axis": "^2.11.1",
@@ -31,10 +33,12 @@
     "@visx/text": "^2.10.0",
     "@visx/tooltip": "^2.10.0",
     "@visx/wordcloud": "^2.10.0",
+    "dayjs": "^1.11.4",
     "next": "12.2.3",
     "react": "18.2.0",
     "react-dom": "18.2.0",
-    "react-icons": "^4.4.0"
+    "react-icons": "^4.4.0",
+    "react-redux": "^8.0.2"
   },
   "devDependencies": {
     "@babel/core": "^7.18.9",

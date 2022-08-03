@@ -32,6 +32,7 @@ module.exports = {
     },
     fontFamily: {
       sans: ['IBM Plex Sans', 'system-ui', 'sans-serif'],
+      mono: ['IBM Plex Mono', 'system-ui', 'monospace'],
     },
   },
   plugins: [
