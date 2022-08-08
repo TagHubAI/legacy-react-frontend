@@ -15,6 +15,7 @@ import {
 } from 'react-icons/io5';
 import * as DropdownMenu from '@radix-ui/react-dropdown-menu';
 import Link from 'next/link';
+import NewDatasetDiaglog from 'components/datasets/NewDatasetDialog';
 day.extend(relativeTime);
 
 const DropdownMenuItem = ({ children }: { children: React.ReactNode }) => (
@@ -33,11 +34,12 @@ const DatasetsPage: NextPageWithLayout = () => {
   }, []);
 
   return (
-    <div className="bg-gray-50 h-full p-4">
+    <div className="h-full p-4">
       <h1 className="text-2xl mb-6">Datasets</h1>
+      <NewDatasetDiaglog />
 
       {datasets.map((dataset) => (
-        <Link key={dataset.id} href={`/datasets/${dataset.id}`}>
+        <Link key={dataset.id} href={`datasets/${dataset.id}`}>
           <a className="flex gap-4 p-4 border-b last-of-type:border-none items-center">
             <div className="grow">{dataset.name}</div>
             <div>{day(dataset.created_at).format('MMMM DD, YYYY')}</div>

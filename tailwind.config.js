@@ -9,11 +9,26 @@ module.exports = {
   ],
   theme: {
     extend: {
-      svg: {
-        backgroundColor: 'black',
-      },
       aspectRatio: {
         '4/3': '4 / 3',
+      },
+      animation: {
+        'fade-in': 'fade-in 200ms ease-in-out',
+        'fade-out': 'fade-out 2000ms ease-in-out',
+      },
+      colors: {
+        'black-a1': 'rgba(0, 0, 0, 0.012)',
+        'black-a2': 'rgba(0, 0, 0, 0.027)',
+        'black-a3': 'rgba(0, 0, 0, 0.047)',
+        'black-a4': 'rgba(0, 0, 0, 0.071)',
+        'black-a5': 'rgba(0, 0, 0, 0.090)',
+        'black-a6': 'rgba(0, 0, 0, 0.114)',
+        'black-a7': 'rgba(0, 0, 0, 0.141)',
+        'black-a8': 'rgba(0, 0, 0, 0.220)',
+        'black-a9': 'rgba(0, 0, 0, 0.439)',
+        'black-a10': 'rgba(0, 0, 0, 0.478)',
+        'black-a11': 'rgba(0, 0, 0, 0.565)',
+        'black-a12': 'rgba(0, 0, 0, 0.910)',
       },
       keyframes: {
         'fade-in': {
@@ -24,10 +39,12 @@ module.exports = {
           '0%': { opacity: 1 },
           '100%': { opacity: 0 },
         },
+        spacing: {
+          0.25: '0.0625rem',
+        },
       },
-      animation: {
-        'fade-in': 'fade-in 200ms ease-in-out',
-        'fade-out': 'fade-out 2000ms ease-in-out',
+      boxShadow: {
+        outline: '0 0 0 1px #fff,0 0 0 3px #000',
       },
     },
     fontFamily: {

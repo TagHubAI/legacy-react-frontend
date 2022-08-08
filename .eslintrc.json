@@ -1,6 +1,7 @@
 {
   "extends": ["next/core-web-vitals", "eslint:recommended", "prettier"],
   "globals": {
-    "React": true
+    "React": true,
+    "JSX": true
   }
 }

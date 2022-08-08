@@ -90,8 +90,8 @@ export default function SideNav() {
   return (
     <nav
       ref={ref}
-      className="flex shrink-0 sm:flex-col z-20 relative justify-between sm:h-screen
-      border-b sm:border-r border-gray-200 data-layout-compact:sm:w-16 sm:w-64"
+      className="flex shrink-0 sm:flex-col z-20 sm:z-0 relative justify-between sm:h-screen
+      border-b sm:border-r border-gray-200 data-layout-compact:sm:w-16 sm:w-64 hover:shadow-lg"
     >
       <>
         <Link href="/">
@@ -129,28 +129,30 @@ export default function SideNav() {
 
           <NavLink
             title="Datasets"
-            href="/datasets"
+            href="/app/datasets"
             icon={<IoServerOutline />}
           />
         </div>
 
         <div className="flex-1"></div>
 
-        <button
-          className="sm:flex hidden items-center mx-2 my-1 sm:my-2 transition-colors hover:bg-gray-100 rounded-sm"
-          onClick={() => setDesktopNavCollapse(!isCollapsed)}
-        >
-          <div className="flex-none h-full w-12 aspect-square flex justify-center items-center">
-            <IoChevronForwardOutline
-              title="Expand/collapse sidebar icon"
-              size="24"
-              className="icons stroke-[2rem]"
-            />
-          </div>
-          <NavLinkContent className="text-sm font-medium">
-            Collapse
-          </NavLinkContent>
-        </button>
+        <div className="hidden sm:flex flex-col mx-2 my-1 sm:my-2 ">
+          <button
+            className="flex items-center transition-colors hover:bg-gray-100 rounded-sm"
+            onClick={() => setDesktopNavCollapse(!isCollapsed)}
+          >
+            <div className="flex-none h-full w-12 aspect-square flex justify-center items-center">
+              <IoChevronForwardOutline
+                title="Expand/collapse sidebar icon"
+                size="16"
+                className="icons stroke-[3rem]"
+              />
+            </div>
+            <NavLinkContent className="text-sm font-medium">
+              Collapse
+            </NavLinkContent>
+          </button>
+        </div>
 
         <button
           className="flex sm:hidden items-center mx-2 my-1 sm:my-2 transition-colors rounded-sm"
