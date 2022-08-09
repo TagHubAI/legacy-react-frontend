@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import Layout from 'components/layouts/App';
+import Layout from 'components/common/Layout';
 import type { NextPageWithLayout } from 'pages/_app';
 import { useSelector, useDispatch } from 'react-redux';
 import type { AppDispatch, RootState } from 'redux/store';

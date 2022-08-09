@@ -1,8 +1,6 @@
-// Button.stories.ts|tsx
-
 import React from 'react';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
-import SideNav from '../../components/app/Navbar';
+import SideNav from '../../components/common/Navbar';
 
 export default {
   title: 'Layout/Navbar',

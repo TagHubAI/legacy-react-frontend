@@ -1,4 +1,4 @@
-import Layout from 'components/layouts/App';
+import Layout from 'components/common/Layout';
 import { useRouter } from 'next/router';
 import type { NextPageWithLayout } from 'pages/_app';
 import { useEffect, useState } from 'react';

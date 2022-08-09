@@ -8,6 +8,7 @@ import {
   IoMenuOutline,
   IoServerOutline,
 } from 'react-icons/io5';
+import cx from 'clsx';
 import logo from 'public/images/logo_white.png';
 
 interface ContentProps {
@@ -17,8 +18,11 @@ interface ContentProps {
 
 const NavLinkContent = ({ className, children }: ContentProps) => (
   <div
-    className={`data-layout-compact:mx-2 mx-1 transition-all duration-300
-    data-layout-compact:opacity-0 compact:invisible overflow-hidden ${className}`}
+    className={cx(
+      `data-layout-compact:mx-2 mx-1 transition-all duration-300
+    data-layout-compact:opacity-0 compact:invisible overflow-hidden`,
+      className
+    )}
   >
     {children}
   </div>
@@ -33,7 +37,7 @@ interface NavLinkProps {
 const NavLink = ({ title, icon, href }: NavLinkProps) => {
   const Icon = icon.type;
   const iconArgs = {
-    className: 'icons stroke-[1.75rem]',
+    className: 'icons stroke-[1.5rem]',
     size: '24',
     title: `${title} icon`,
   };
@@ -90,14 +94,14 @@ export default function SideNav() {
   return (
     <nav
       ref={ref}
-      className="flex shrink-0 sm:flex-col z-20 sm:z-0 relative justify-between sm:h-screen
-      border-b sm:border-r border-gray-200 data-layout-compact:sm:w-16 sm:w-64 hover:shadow-lg"
+      className="flex fixed top-0 shrink-0 sm:flex-col z-10 w-full justify-between sm:h-screen bg-white
+      border-b sm:border-r border-gray-200 data-layout-compact:sm:w-16 sm:w-64"
     >
       <>
-        <Link href="/">
-          <a className="flex items-center px-2 py-1 sm:py-2 sm:border-b border-gray-200">
-            <div className="flex-none h-full w-12 aspect-square flex justify-center items-center">
-              <div className="flex w-8 bg-black rounded-full">
+        <div className="flex items-center px-2 py-1 sm:pt-2">
+          <div className="flex-none h-full w-12 aspect-square flex justify-center items-center">
+            <Link href="/">
+              <a className="flex w-8 bg-black rounded-full">
                 <Image
                   src={logo}
                   alt="TagHub Logo"
@@ -105,21 +109,21 @@ export default function SideNav() {
                   width={'72px'}
                   height={'72px'}
                 />
-              </div>
-            </div>
-            <NavLinkContent className="text-xl font-bold tracking-tight">
-              TagHub
-            </NavLinkContent>
-          </a>
-        </Link>
+              </a>
+            </Link>
+          </div>
+          <NavLinkContent className="text-xl font-bold tracking-tight">
+            TagHub
+          </NavLinkContent>
+        </div>
 
         <div
           ref={linkGroupRef}
           className="hidden sm:flex sm:z-0 -z-10 absolute sm:static flex-col top-14 py-2 sm:py-0 sm:my-2
-          w-screen sm:w-full border-b border-t bg-white shadow-lg sm:shadow-none sm:border-none
+          bg-white w-screen sm:w-full border-b border-t shadow-lg sm:shadow-none sm:border-none
            border-b-gray-300"
         >
-          <NavLink title="Dashboard" href="/app" icon={<IoGridOutline />} />
+          <NavLink title="Dashboard" href="/" icon={<IoGridOutline />} />
 
           <NavLink
             title="Workflows"
@@ -129,7 +133,7 @@ export default function SideNav() {
 
           <NavLink
             title="Datasets"
-            href="/app/datasets"
+            href="/datasets"
             icon={<IoServerOutline />}
           />
         </div>
@@ -145,7 +149,7 @@ export default function SideNav() {
               <IoChevronForwardOutline
                 title="Expand/collapse sidebar icon"
                 size="16"
-                className="icons stroke-[3rem]"
+                className="icons stroke-[2.25rem]"
               />
             </div>
             <NavLinkContent className="text-sm font-medium">
@@ -162,7 +166,7 @@ export default function SideNav() {
             <IoMenuOutline
               title="Expand/collapse sidebar icon"
               size="28"
-              className="icons stroke-[2rem]"
+              className="icons stroke-[1.5rem]"
             />
           </div>
         </button>

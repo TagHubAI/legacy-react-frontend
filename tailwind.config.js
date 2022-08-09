@@ -47,6 +47,7 @@ module.exports = {
         outline: '0 0 0 1px #fff,0 0 0 3px #000',
       },
     },
+
     fontFamily: {
       sans: ['IBM Plex Sans', 'system-ui', 'sans-serif'],
       mono: ['IBM Plex Mono', 'system-ui', 'monospace'],
