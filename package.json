@@ -67,6 +67,7 @@
     "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-storybook": "^0.6.3",
     "mem": "^9.0.2",
+    "msw": "^0.44.2",
     "postcss": "^8.4.14",
     "storybook-addon-next": "^1.6.7",
     "tailwindcss": "^3.1.6",
@@ -79,5 +80,8 @@
     "singleQuote": true
   },
   "readme": "ERROR: No README data found!",
-  "_id": "taghub-frontend@0.1.0"
+  "_id": "taghub-frontend@0.1.0",
+  "msw": {
+    "workerDirectory": "public"
+  }
 }
