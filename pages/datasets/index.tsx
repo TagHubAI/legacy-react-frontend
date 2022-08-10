@@ -34,7 +34,7 @@ const DatasetsPage: NextPageWithLayout = () => {
   }, []);
 
   return (
-    <div className="h-full p-4">
+    <>
       <h1 className="text-2xl mb-6">Datasets</h1>
       <NewDatasetDiaglog />
 
@@ -76,7 +76,7 @@ const DatasetsPage: NextPageWithLayout = () => {
           </a>
         </Link>
       ))}
-    </div>
+    </>
   );
 };
 

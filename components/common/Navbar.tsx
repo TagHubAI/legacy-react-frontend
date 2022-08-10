@@ -94,7 +94,7 @@ export default function SideNav() {
   return (
     <nav
       ref={ref}
-      className="flex fixed top-0 shrink-0 sm:flex-col z-10 w-full justify-between sm:h-screen bg-white
+      className="flex fixed top-0 shrink-0 sm:flex-col w-full justify-between sm:h-screen bg-white
       border-b sm:border-r border-gray-200 data-layout-compact:sm:w-16 sm:w-64"
     >
       <>

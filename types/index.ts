@@ -1,8 +1,10 @@
+export type WorkflowStatus = 'running' | 'finished' | 'failed' | 'unknown';
+
 export type Workflow = {
   id: string;
   title: string;
   description?: string;
-  status: 'processing' | 'success' | 'failed' | 'unknown';
+  status: WorkflowStatus;
   created_at: string;
   modified_at: string;
   last_opened: string;

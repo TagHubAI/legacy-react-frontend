@@ -9,8 +9,7 @@ const AppHomePage: NextPageWithLayout = () => {
   const [open, setOpen] = useState(false);
 
   return (
-    <main ref={ref} className="bg-gray-50 px-4 py-3 w-full h-full relative">
-      <form action=""></form>
+    <div ref={ref}>
       <div className="my-7">
         <h1 className="text-2xl my-4">Recent workflows</h1>
 
@@ -33,7 +32,7 @@ const AppHomePage: NextPageWithLayout = () => {
           </Dialog.Content>
         </Dialog.Portal>
       </Dialog.Root>
-    </main>
+    </div>
   );
 };
 

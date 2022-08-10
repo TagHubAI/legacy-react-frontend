@@ -1,8 +1,10 @@
 import cx from 'clsx';
 
 const variants = {
-  default: 'bg-black text-white',
+  default: 'bg-gray-200 text-gray-700',
   success: 'bg-green-200 text-green-700',
+  failure: 'bg-red-200 text-red-700',
+  progress: 'bg-yellow-200 text-yellow-700',
 };
 
 const sizes = {
@@ -50,7 +52,7 @@ const Chip = forwardRef<HTMLSpanElement, ChipProps>(
       aria-label={`${label}: ${children}`}
       {...args}
     >
-      <div className="bg-green-700 w-1.5 h-1.5 rounded-full"></div>
+      {/* <div className="bg-green-700 w-1.5 h-1.5 rounded-full"></div> */}
       {children}
     </span>
   )

@@ -1,11 +1,5 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
-
-interface Workflow {
-  id: number;
-  name: string;
-  created_at: string;
-  modified_at: string;
-}
+import { Workflow } from 'types';
 
 interface WorkflowState {
   values: Workflow[];
